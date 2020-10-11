@@ -14,7 +14,7 @@ def getVersionName = { ->
     def versionNameStr = matcher[0] + "." + matcher[1] + "."
     try {
         versionNameStr += matcher[2]
-    } catch (Exception e) {
+    } catch (Exception ignored) {
         versionName += "0"
     }
     return versionNameStr
