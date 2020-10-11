@@ -100,11 +100,11 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("NewApi")
     fun getDeviceId(): String {
         val telephonyManager: TelephonyManager
-        try {
+        return try {
             telephonyManager = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager;
-            return "DeviceID: " + telephonyManager.imei
+            "DeviceID: " + telephonyManager.imei
         } catch (e: SecurityException) {
-            return "DeviceID: Permission denied"
+            "DeviceID: Permission denied"
         }
     }
 }
